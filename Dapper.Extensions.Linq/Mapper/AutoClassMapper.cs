@@ -30,7 +30,7 @@ namespace Dapper.Extensions.Linq.Mapper
         {
             if (Attribute.IsDefined(EntityType, typeof(SchemaAttribute)))
                 schemaName = ((SchemaAttribute)EntityType.GetCustomAttribute(typeof(SchemaAttribute))).Name;
-            base.Table(schemaName);
+            base.Schema(schemaName);
         }
 
         private void AutoMap()
